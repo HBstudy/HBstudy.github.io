@@ -1,9 +1,9 @@
-const images = ["0.jpeg", "1.jpeg", "2.jpeg"];
+const body = document.querySelector("body");
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+const IMG_NUMBER = 3;
 
+const chosenImage = Math.floor(Math.random() * IMG_NUMBER);
 const image = document.createElement("img");
-
-image.src = `img/${chosenImage}`;
-
-document.body.appendChild(image);
+image.src = `img/${chosenImage}.jpeg`;
+image.classList.add("bgstyle");
+body.appendChild(image);

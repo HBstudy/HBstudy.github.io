@@ -1,3 +1,150 @@
-.hidden {
-    display: none;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Noto Sans KR;
+}
+
+.bgstyle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.clock {
+  line-height: 0.5em;
+}
+
+.clock .date {
+  color: #404040;
+  font-size: 30px;
+  letter-spacing: 15px;
+  padding-top: 60px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock .time {
+  color: #000000;
+  font-size: 100px;
+  letter-spacing: 15px;
+  padding-bottom: 40px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.input-form {
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:#404040;
+  display: none;
+}
+
+.greetings {
+  font-size: 40px;
+  letter-spacing: 4px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:black;
+  display: none;
+}
+
+.showing {
+  margin-bottom: 40px;
+  margin-top: -45px;
+  display: block;
+}
+
+input[type="text"] {
+  text-align: center;
+  appearance: none;
+  background-color: none;
+  line-height: 0;
+  font-size: 20px;
+  width: 300px;
+  padding: 10px 15px;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+
+.todo-form {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  font-size: 20px;
+  padding-right: 40px;
+}
+
+ul button {
+  color: black;
+}
+
+button {
+  position: relative;
+  height: 31px;
+  font-size: 0.8em;
+  padding: 0.2em;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.weather {
+  color: black;
+  font-family: "Fredoka One", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  font-size: 20px;
+}
+
+span {
+  padding-right: 10px;
+}
+
+body {
+  color: white;
+}
+
+.clicked {
+  color: #7f8c8d;
+}

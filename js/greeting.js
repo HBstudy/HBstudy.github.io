@@ -1,28 +1,27 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
-const greeting = document.querySelector("#greeting");
+const inputForm = document.querySelector(".input-form"),
+  input = inputForm.querySelector("input");
+greeting = document.querySelector(".greetings");
 
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+const USERNAME_KEY = "username",
+  SHOWING_CLASSNAME = "showing";
 
-function onLoginSubmit(event) {
+function handleSubmit(event) {
   event.preventDefault();
-  loginForm.classList.add(HIDDEN_CLASSNAME);
-  const username = loginInput.value;
-  localStorage.setItem(USERNAME_KEY, username);
-  paintGreetings(username);
+  const userName = input.value;
+  localStorage.setItem(USERNAME_KEY, userName);
+  paintGreeting(userName);
 }
 
-function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+function paintGreeting(userName) {
+  inputForm.classList.remove(SHOWING_CLASSNAME);
+  greeting.innerText = `Hello! ${userName}`;
+  greeting.classList.add(SHOWING_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
-
 if (savedUsername === null) {
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", onLoginSubmit);
+  inputForm.classList.add(SHOWING_CLASSNAME);
+  inputForm.addEventListener("submit", handleSubmit);
 } else {
-  paintGreetings(savedUsername);
+  paintGreeting(savedUsername);
 }
